@@ -1,17 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOP-tic-tac-toe</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="./assets/favicon/favicon.svg" type="image/x-icon">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOP-tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="main-menu" id="main-menu">
+      <h1 class="main-menu__heading">Tic Tac Toe</h1>
+      <button class="main-menu__play-button" id="play-button" type="button">Play</button>
+      <img class="main-menu__image-sun" src="./assets/images/sun.svg" alt="hand-drawing-sun" />
+      <img
+        class="main-menu__image-cloud"
+        src="./assets/images/cloud.svg"
+        alt="hand-drawing-cloud"
+      />
+    </header>
 
-  <h1>Hello World</h1>
+    <main class="main-game" id="main-game">
+      <button class="main-game__exit-button" id="exit-button" type="button">X</button>
+      <div class="main-game__player-container">
+        <div class="main-game__player-card">
+          <div class="main-game__player-info">
+            <p class="main-game__player-name" id="player-one-name">Josh</p>
+            <p class="main-game__player-score" id="player-one-score">2</p>
+          </div>
+          <p class="main-game__player-marker" id="player-one-marker">O</p>
+        </div>
+      </div>
+      <div class="main-game__gameboard-container">
+        <div class="main-game__gameboard">
+          <div
+            class="main-game__gameboard-tile remove-top-border remove-left-border"
+            id="gameboard-tile"
+            data-index="0"
+          ></div>
+          <div
+            class="main-game__gameboard-tile remove-top-border"
+            id="gameboard-tile"
+            data-index="1"
+          ></div>
+          <div
+            class="main-game__gameboard-tile remove-top-border remove-right-border"
+            id="gameboard-tile"
+            data-index="2"
+          ></div>
+          <div
+            class="main-game__gameboard-tile remove-left-border"
+            id="gameboard-tile"
+            data-index="3"
+          ></div>
+          <div class="main-game__gameboard-tile" id="gameboard-tile" data-index="4"></div>
+          <div
+            class="main-game__gameboard-tile remove-right-border"
+            id="gameboard-tile"
+            data-index="5"
+          ></div>
+          <div
+            class="main-game__gameboard-tile remove-left-border remove-bottom-border"
+            id="gameboard-tile"
+            data-index="6"
+          ></div>
+          <div
+            class="main-game__gameboard-tile remove-bottom-border"
+            id="gameboard-tile"
+            data-index="7"
+          ></div>
+          <div
+            class="main-game__gameboard-tile remove-right-border remove-bottom-border"
+            id="gameboard-tile"
+            data-index="8"
+          ></div>
+        </div>
+      </div>
+      <div class="main-game__player-container">
+        <div class="main-game__player-card">
+          <p class="main-game__player-marker" id="player-two-marker">X</p>
+          <div class="main-game__player-info">
+            <p class="main-game__player-score" id="player-two-score">1</p>
+            <p class="main-game__player-name" id="player-two-name">Tyler</p>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  <script src="app.js"></script>
-  
-</body>
+    <section class="modal-container" id="modal">
+      <div class="modal">
+        <div class="modal__text-container" id="modal-text-container"></div>
+        <div class="modal__button-container" id="modal-button-container"></div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
 </html>
