@@ -146,7 +146,9 @@ const uiController = (function () {
       if (gameState) {
         const h3 = document.createElement("h3")
         h3.textContent =
-          gameState == "win" ? `${gameController.getActivePlayer().getPlayerName()} Win` : "Draw"
+          gameState == "win"
+            ? `${gameController.getActivePlayer().getPlayerName()} Wins!`
+            : "it's a draw"
         modalTextContainer.appendChild(h3)
 
         const button = document.createElement("button")
